@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import words from "./wordList.json";
 import Drawing from "./components/Drawing";
 import Word from "./components/Word";
@@ -8,6 +8,7 @@ import PlayAgain from "./components/PlayAgain";
 function App() {
   const randomWord = Math.floor(Math.random() * words.length);
   const [wordToGuess, setWordToGuess] = useState<string>(words[randomWord]);
+
   console.log(wordToGuess);
 
   const [gussedLetters, setGuessedLetters] = useState<string[]>([]);
@@ -47,12 +48,12 @@ function App() {
         <div className="">
           {isWinner && (
             <div className="win-lose">
-              You Win! <PlayAgain />
+              You Win! <PlayAgain setWordToGuess={setWordToGuess} />
             </div>
           )}
           {isLoser && (
             <div className="win-lose">
-              You lose! <PlayAgain />
+              You lose! <PlayAgain setWordToGuess={setWordToGuess} />
             </div>
           )}
         </div>
