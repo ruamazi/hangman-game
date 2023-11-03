@@ -8,7 +8,7 @@ const Word = ({ gussedLetters, wordToGuess, reveal }: HangmanDrawingProps) => {
   return (
     <div className="word-wrapper">
       {wordToGuess.split("").map((letter, i) => (
-        <p key={i + letter} className="letter">
+        <p key={letter + i} className="letter">
           <span
             className={
               gussedLetters.includes(letter) || reveal

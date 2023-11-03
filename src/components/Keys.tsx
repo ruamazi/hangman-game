@@ -32,6 +32,7 @@ type KeyBoardProps = {
   addGuessedLetter: (letter: string) => void;
   disabled?: boolean;
 };
+
 const Keys = ({
   activeLetters,
   inactiveLetters,
@@ -40,7 +41,7 @@ const Keys = ({
 }: KeyBoardProps) => {
   return (
     <div className="keys-wrapper">
-      {englishLetters.map((key, i) => {
+      {englishLetters.map((key) => {
         const isActive = activeLetters.includes(key);
         const isInactive = inactiveLetters.includes(key);
         return (
@@ -50,7 +51,7 @@ const Keys = ({
               isInactive || disabled ? "inactive" : ""
             } `}
             disabled={isActive || isInactive || disabled}
-            key={i}
+            key={key}
           >
             {key}
           </button>

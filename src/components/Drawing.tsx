@@ -1,9 +1,9 @@
-const HEAD: JSX.Element = <div className="p-head" />;
-const BODY: JSX.Element = <div className="p-body" />;
-const RIGHT_ARM: JSX.Element = <div className="r-arm" />;
-const LEFT_ARM: JSX.Element = <div className="l-arm" />;
-const RIGHT_LEG: JSX.Element = <div className="r-leg" />;
-const LEFT_LEG: JSX.Element = <div className="l-leg" />;
+const HEAD: JSX.Element = <div key={"1"} className="p-head" />;
+const BODY: JSX.Element = <div key={"2"} className="p-body" />;
+const RIGHT_ARM: JSX.Element = <div key={"3"} className="r-arm" />;
+const LEFT_ARM: JSX.Element = <div key={"4"} className="l-arm" />;
+const RIGHT_LEG: JSX.Element = <div key={"5"} className="r-leg" />;
+const LEFT_LEG: JSX.Element = <div key={"6"} className="l-leg" />;
 const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG];
 
 type HangmanDrawingProps = {
