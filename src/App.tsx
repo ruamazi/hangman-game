@@ -47,12 +47,12 @@ function App() {
         <div className="">
           {isWinner && (
             <div className="win-lose">
-              You Win! <PlayAgain setWordToGuess={setWordToGuess} />
+              You Win! <PlayAgain />
             </div>
           )}
           {isLoser && (
             <div className="win-lose">
-              You lose! <PlayAgain setWordToGuess={setWordToGuess} />
+              You lose! <PlayAgain />
             </div>
           )}
         </div>
