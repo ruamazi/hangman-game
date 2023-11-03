@@ -7,8 +7,7 @@ import PlayAgain from "./components/PlayAgain";
 
 function App() {
   const randomWord = Math.floor(Math.random() * words.length);
-  const wordToGuess: string = words[randomWord];
-  // const [wordToGuess, setWordToGuess] = useState<string>();
+  const [wordToGuess, setWordToGuess] = useState<string>(words[randomWord]);
   console.log(wordToGuess);
 
   const [gussedLetters, setGuessedLetters] = useState<string[]>([]);
